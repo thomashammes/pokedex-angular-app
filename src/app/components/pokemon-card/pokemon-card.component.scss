@@ -1,0 +1,44 @@
+#cardContainer {
+  display: flex;
+  align-items: center;
+}
+
+#card {
+  display: flex;
+  align-items: center;
+  //justify-content: space-evenly;
+  width: 100%;
+  height: 50px;
+  background: #feebb9;
+  border-radius: 50px 5px 5px 50px;
+
+  img {
+    height: 50px;
+    aspect-ratio: 1;
+  }
+}
+
+span {
+  font-size: 22px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-radius: 0 0 5px 0;
+  margin-right: 8px;
+  transform: rotate(-45deg);
+  background: linear-gradient(-45deg, #ffffff 50%, transparent 50%);
+}
+
+.circle {
+  margin-left: 10px;
+  border-radius: 50%;
+  height: 30px;
+  aspect-ratio: 1;
+  background-color: #ecd9a5;
+}
+
+.innerShadow {
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0px 3px -0px;
+}

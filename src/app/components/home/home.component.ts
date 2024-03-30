@@ -4,11 +4,13 @@ import {PokemonData} from "../pokemon-data/pokemon-data";
 import {HttpErrorResponse} from "@angular/common/http";
 import {NgForOf, NgIf} from "@angular/common";
 import {PokeapiResponse, PokeapiResult} from "../../interfaces/pokeapi";
+import {PokemonDisplayComponent} from "../pokemon-display/pokemon-display.component";
+import {PokemonCardComponent} from "../pokemon-card/pokemon-card.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgForOf],
+  imports: [NgForOf, PokemonDisplayComponent, PokemonCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
