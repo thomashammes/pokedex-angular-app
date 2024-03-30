@@ -76,7 +76,6 @@ header {
   color: var.$off-white;
   -webkit-text-stroke-color: #943745;
   -webkit-text-stroke-width: 2.5px;
-  font-weight: 800;
   font-size: 20px;
   width: auto;
   height: 50px;
@@ -87,7 +86,10 @@ header {
   justify-content: space-between;
 
   h1 {
+    position: relative;
     margin: 0 30px;
+    font-weight: 900;
+    bottom: 2px;
   }
 
   img {
@@ -109,6 +111,71 @@ header {
   border-radius: 50%;
 
   //border: 1px solid black;
+}
+
+footer {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid #ffa3a3;
+  user-select: none;
+  background: #f33e3e;
+}
+
+
+.consoleButton {
+  position: relative;
+  //top: -1px;
+  height: 34px;
+  aspect-ratio: 1;
+  background-color: #6c696f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    position: relative;
+    max-height: 28px;
+    //bottom: 1px;
+  }
+}
+
+.consoleButtonWrapper {
+  position: relative;
+  bottom: 2px;
+  height: 34px;
+  aspect-ratio: 1;
+  border-radius: 17px;
+  box-shadow: rgba(26, 26, 26, 0.66) 0px 3px 0px 0px;
+}
+
+.consoleButtonWrapper:active {
+  height: 34px;
+  aspect-ratio: 1;
+  border-radius: 17px;
+  padding: 1px 0 0 0;
+  bottom: 0;
+  box-shadow: rgba(26, 26, 26, 0.66) 0px 1px 0px 0px;
+}
+
+span {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 8px;
+  color: var.$off-white;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 /*

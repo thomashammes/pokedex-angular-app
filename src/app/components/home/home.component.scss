@@ -1,13 +1,13 @@
 @use '../../../assets/var.scss';
 
 #mainContainer {
-  height: calc(100vh - 85px);
+  height: calc(100vh - 128px);
   /*
    */
   background: linear-gradient(
     to bottom,
       #739ce6,
-      #48599d,
+      #32489b,
       #739ce6
   );
 
@@ -19,38 +19,24 @@
   align-items: center;
     background: linear-gradient(
         to bottom,
-        var.$bg-stripe1,
-        var.$bg-stripe1 2%,
-        var.$bg-stripe2 2%,
-        var.$bg-stripe2 14%,
-        var.$bg-stripe1 14%,
-        var.$bg-stripe1 16%,
-        var.$bg-stripe2 16%,
-        var.$bg-stripe2 21%,
-        var.$bg-stripe1 21%,
-        var.$bg-stripe1 23%,
-        var.$bg-stripe2 23%,
-        var.$bg-stripe2 25%,
-        var.$bg-stripe1 25%,
-        var.$bg-stripe1 70%,
-        var.$bg-stripe2 70%,
-        var.$bg-stripe2 72%,
-        var.$bg-stripe1 72%,
-        var.$bg-stripe1 74%,
-        var.$bg-stripe2 74%,
-        var.$bg-stripe2 77%,
-        var.$bg-stripe1 77%,
-        var.$bg-stripe1 79%,
-        var.$bg-stripe2 79%,
-        var.$bg-stripe2 84%,
-        var.$bg-stripe1 84%,
-        var.$bg-stripe1 86%,
-        var.$bg-stripe2 86%,
-        var.$bg-stripe2 92%,
-        var.$bg-stripe1 92%,
-        var.$bg-stripe1 94%,
-        var.$bg-stripe2 94%,
-
+        var.$bg-stripe1 0 1.5%,
+        var.$bg-stripe2 1.5% 10%,
+        var.$bg-stripe1 10% 12%,
+        var.$bg-stripe2 12% 18%,
+        var.$bg-stripe1 18% 19.5%,
+        var.$bg-stripe2 19.5% 23%,
+        var.$bg-stripe1 23% 24.5%,
+        var.$bg-stripe2 24.5% 26%,
+        var.$bg-stripe1 26% 65%,
+        var.$bg-stripe2 65% 66.5%,
+        var.$bg-stripe1 66.5% 68%,
+        var.$bg-stripe2 68% 71.5%,
+        var.$bg-stripe1 71.5% 73%,
+        var.$bg-stripe2 73% 79%,
+        var.$bg-stripe1 79% 80.5%,
+        var.$bg-stripe2 80.5% 89%,
+        var.$bg-stripe1 89% 90.5%,
+        var.$bg-stripe2 90.5% 100%
     );
   }
 }
@@ -64,6 +50,6 @@ app-pokemon-display {
   display: flex;
   flex-direction: column;
   //gap: 8px;
-  max-height: calc(100vh - 88px);
+  max-height: calc(100vh - 131px);
   overflow-y: scroll;
 }

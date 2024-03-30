@@ -54,22 +54,24 @@
   img {
     height: 50px;
     aspect-ratio: 1;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 }
 
 span {
-  font-size: 22px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #3f3717;
 }
 
 #number{
   position: absolute;
-  left: 155px;
+  left: 165px;
 }
 
 #name{
   position: absolute;
-  left: 255px;
+  left: 270px;
 }
 
 #arrow {
