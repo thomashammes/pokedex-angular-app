@@ -6,35 +6,42 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  border-top: solid #2e3741 7px;
-  border-bottom: solid #2e3741 7px;
+  border-top: solid #412e2e 8px;
+  border-bottom: solid #412e2e 7px;
   outline: 2px solid #737373;
   user-select: none;
   background: linear-gradient(
       to right,
-      #6188ff,
-      #6188ff 70%,
-      #71a4f3 71%,
-      #77A8E8 95%,
-      #77A8E8 96%,
-      #94c3f1 100%
+      #f33e3e,
+      #f33e3e 70%,
+      #fa4242 71%,
+      #f85252 72%,
+      #fa5f5f 95%,
+      #f66666 97%,
+      #f66666 98%,
+      #fc8282 100%
   );
 }
 
 #moreProjectsWrapper {
+  overflow: hidden;
   align-self: start;
+  white-space: nowrap;
   top: 8px;
   width: 280px;
+  min-width: 220px;
   height: 50px;
+  max-height: 50px;
   border-radius: 50px;
   position: relative;
-  background: linear-gradient(to bottom, #3969c4, #344B9D);
+  background: linear-gradient(to bottom, #c03131, #9a2c2c);
   padding: 3px 2px 0 1px;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 3px 1px;
 }
 
 #moreProjectsWrapper:active {
   width: 283px;
+  height: 50px;
   border-radius: 50px;
   padding: 1px 0 0 0;
 }
@@ -44,7 +51,7 @@ header {
   display: flex;
   justify-content: center;
   color: var.$off-white;
-  background-color: #4279CC;
+  background-color: #d73e43;
   text-decoration: none;
   font-size: 25px;
   line-height: 50px;
@@ -55,7 +62,7 @@ header {
 #pokedexTitleWrapper {
   border-radius: 50px;
   position: relative;
-  background: linear-gradient(to bottom, #3969c4, #344B9D);
+  background: linear-gradient(to bottom, #c43963, #9a2b2b);
   padding: 5px;
 }
 
@@ -63,8 +70,8 @@ header {
   display: flex;
   background-color: var.$title-bg;
   color: var.$off-white;
-  -webkit-text-stroke-color: #435E6D;
-  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #943745;
+  -webkit-text-stroke-width: 2.5px;
   font-weight: 800;
   font-size: 20px;
   width: auto;
@@ -84,24 +91,17 @@ header {
   }
 }
 
-#pokedexTitleWrapper {
-  border-radius: 50px;
-  position: relative;
-  background: linear-gradient(to bottom, #3969c4, #344B9D);
-  padding: 5px;
-}
-
 .titlePokeball {
   display: block;
-  width: 40px;
   height: 40px;
+  aspect-ratio: 1;
   background: radial-gradient(
       var.$title-pokeball 9%,
       var.$title-pokeball 10% 19%,
-      var.$title-bg 20% 26%,
-      transparent 27%
+      var.$title-bg 20% 30%,
+      transparent 31%
   ),
-  linear-gradient(to bottom, var.$title-pokeball 0% 47%, transparent 47% 53%, var.$title-pokeball 53% 100%);
+  linear-gradient(to bottom, var.$title-pokeball 0% 46%, transparent 46% 54%, var.$title-pokeball 54% 100%);
   border-radius: 50%;
 
   //border: 1px solid black;
