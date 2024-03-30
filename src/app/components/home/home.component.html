@@ -4,7 +4,9 @@
     <app-pokemon-display></app-pokemon-display>
 
     <div id="cardsContainer">
-      <app-pokemon-card *ngFor="let pokemon of pokemonList"></app-pokemon-card>
+      <app-pokemon-card *ngFor="let pokemon of pokemonList"
+        [data]="pokemon"
+      ></app-pokemon-card>
     </div>
   </div>
 </main>

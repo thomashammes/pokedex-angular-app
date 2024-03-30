@@ -56,7 +56,7 @@
 }
 
 app-pokemon-display {
-  margin-left: 5%;
+  margin-left: 10%;
   margin-right: 5%;
 }
 
@@ -64,4 +64,6 @@ app-pokemon-display {
   display: flex;
   flex-direction: column;
   //gap: 8px;
+  max-height: calc(100vh - 88px);
+  overflow-y: scroll;
 }

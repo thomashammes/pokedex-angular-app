@@ -1,11 +1,11 @@
-<div id="cardWrapper">
+<div id="cardWrapper" >
   <div id="cardContainer">
     <div id="arrow"></div>
     <div id="card">
       <div class="circle innerShadow"></div>
-      <img src="../../../assets/img/bulbasaur.png" alt="">
-      <span>No. 001</span>
-      <span>Bulbasaur</span>
+      <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png' alt="">
+      <span id="number">No. {{id}}</span>
+      <span id="name" *ngIf="data">{{ data.name | titlecase }}</span>
     </div>
   </div>
 </div>

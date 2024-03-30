@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getByPage();
   }
-  public getByPage() {
-    return this.pokeapiService.getByPage().subscribe({
+  public getByPage(limit:number = 151) {
+    return this.pokeapiService.getByPage(limit).subscribe({
       next: (response: PokeapiResponse) => {
         let responseResults: PokeapiResult[] = [];
         if (response?.results.length > 0) {
@@ -41,5 +41,4 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
 }

@@ -18,14 +18,12 @@ export class PokeapiService {
   }
 
 
-  getById() {
-
-
+  getById(id:string) {
+    return this.http.get<any>(`${this.apiServerUrl}/pokemon/${id}`);
   }
 
-  getByPage(): Observable<PokeapiResponse> {
-    return this.http.get<any>(`${this.apiServerUrl}/pokemon/?limit=10&offset=20 `);
-
+  getByPage(limit:number): Observable<PokeapiResponse> {
+    return this.http.get<any>(`${this.apiServerUrl}/pokemon/?limit=${limit}&offset=0`);
   }
 
 
