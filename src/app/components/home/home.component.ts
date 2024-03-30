@@ -18,8 +18,7 @@ export class HomeComponent implements OnInit {
 
   public pokemonList:PokeapiResult[] = [];
 
-  constructor(private pokeapiService: PokeapiService) {
-  }
+  constructor(private pokeapiService: PokeapiService) { }
 
   ngOnInit(): void {
     this.getByPage();

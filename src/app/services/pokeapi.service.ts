@@ -24,7 +24,7 @@ export class PokeapiService {
   }
 
   getByPage(): Observable<PokeapiResponse> {
-    return this.http.get<any>(`${this.apiServerUrl}/pokemon/?limit=20&offset=20 `);
+    return this.http.get<any>(`${this.apiServerUrl}/pokemon/?limit=10&offset=20 `);
 
   }
 

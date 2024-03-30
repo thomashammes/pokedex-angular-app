@@ -1,5 +1,9 @@
 @use '../assets/var.scss';
 
+html {
+  background-color: #729be3;
+}
+
 header {
   height: 70px;
   display: flex;
