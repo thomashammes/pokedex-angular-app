@@ -1,6 +1,6 @@
-<div id="cardWrapper" >
+<div id="cardWrapper"  [ngClass]="{selected: isSelected}">
   <div id="cardContainer">
-    <div id="arrow"></div>
+    <div id="arrow" [ngClass]="{selected: isSelected}"></div>
     <div id="card" (click)="pokemonClicked.emit(id)">
       <div class="circle innerShadow"></div>
       <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png' alt="">

@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, Output, EventEmitter, SimpleChanges} from '@angular/core';
 import {PokeapiResult} from "../../interfaces/pokeapi";
-import {NgIf, TitleCasePipe} from "@angular/common";
+import {NgClass, NgIf, TitleCasePipe} from "@angular/common";
 import {PokeapiService} from "../../services/pokeapi.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {PokemonData} from "../../interfaces/pokemon";
@@ -10,7 +10,8 @@ import {PokemonData} from "../../interfaces/pokemon";
   standalone: true,
   imports: [
     NgIf,
-    TitleCasePipe
+    TitleCasePipe,
+    NgClass
   ],
   templateUrl: './pokemon-card.component.html',
   styleUrl: './pokemon-card.component.scss'
@@ -19,7 +20,8 @@ export class PokemonCardComponent implements OnChanges{
 
   constructor(private pokeapiService: PokeapiService) { }
 
-  @Input() data?:PokeapiResult | undefined;
+  @Input() data?: PokeapiResult | undefined;
+  @Input() isSelected?: boolean = false;
   @Output() pokemonClicked = new EventEmitter<string>();
   id:string = "0";
 

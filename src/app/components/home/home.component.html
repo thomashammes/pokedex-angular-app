@@ -10,6 +10,7 @@
       <app-pokemon-card *ngFor="let pokemon of pokemonList"
         [data]="pokemon"
         (pokemonClicked)="cardClicked($event)"
+        [isSelected]="selectedPokemonData?.name === pokemon?.name"
       ></app-pokemon-card>
     </div>
   </div>
