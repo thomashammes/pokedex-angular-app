@@ -43,7 +43,7 @@
 
 app-pokemon-display {
   margin-left: 10%;
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
 #cardsContainer {
@@ -52,5 +52,37 @@ app-pokemon-display {
   //gap: 8px;
   max-height: calc(100vh - 131px);
   overflow-y: scroll;
+  margin-right: 7px;
+  padding-right: 8px;
   //overflow-x: hidden;
 }
+
+::-webkit-scrollbar{
+  width: 12px;
+  margin-right: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #e9563d;
+  border-radius: 2px;
+  /* Con este truco hago el thumb más chico que su padre */
+  box-shadow: inset 0 0 0 2px #882a1a;
+  border-left: 1.5px solid transparent;
+  border-right: 1.5px solid transparent;
+  background-clip: padding-box;
+  cursor:grab;
+}
+
+::-webkit-scrollbar-track {
+  border: solid #9bbdf5 2.5px;
+  cursor: pointer;
+  background:
+    repeating-linear-gradient(
+        #0c3853 0px 3px,
+        var.$bg-stripe2 3px 6px
+    ),
+    linear-gradient(
+      #5c89ab, #0c3a5f
+    );
+}
+

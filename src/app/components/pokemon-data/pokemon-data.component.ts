@@ -25,7 +25,6 @@ export class PokemonDataComponent implements OnInit {
   public getDittoTest(): void {
     this.pokeApiService.getDittoTest().subscribe({
       next: (response: any) => {
-        console.log(response);
         this.pokemonList = response;
       },
       error: (error: HttpErrorResponse) => {

@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
           responseResults =  response.results;
         }
         this.pokemonList = [...this.pokemonList, ...responseResults];
+        this.cardClicked(this.pokemonList[0].url.substring(34, this.pokemonList[0].url.length - 1));
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
