@@ -1,13 +1,6 @@
 <div id="displayContainerWrapper">
   <div id="displayContainer">
-    <div id="displayStripes">
-        <img
-          style="position: relative"
-          [style.height.%]="pokemon.imgHeight"
-          [style.width.%]="pokemon.imgHeight * 0.86"
-          [ngSrc]="pokemon.sprites.other.home.front_default"
-          alt="" *ngIf="pokemon"
-          fill="">
+    <div id="displayStripes" [innerHTML]="htmlImgContent">
     </div>
   </div>
 </div>

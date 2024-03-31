@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   public pokemonList:PokeapiResult[] = [];
   public selectedPokemonData?:PokemonData;
-
+  public selectedPokemonShape?:string;
 
   constructor(private pokeapiService: PokeapiService) { }
 
@@ -35,9 +35,6 @@ export class HomeComponent implements OnInit {
           responseResults =  response.results;
         }
         this.pokemonList = [...this.pokemonList, ...responseResults];
-
-        console.log("this.pokemonList");
-        console.log(this.pokemonList);
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
@@ -47,20 +44,18 @@ export class HomeComponent implements OnInit {
   }
 
   public cardClicked(eventId:string) {
+    this.pokeapiService.getSpeciesById(eventId).subscribe({
+      next: (response: SpeciesData) => {
+        this.selectedPokemonShape = response.shape?.name;
+      },
+      error: (error: HttpErrorResponse) => {
+        alert(error.message);
+        console.error(error);
+      }
+    });
+
     this.pokeapiService.getById(eventId).subscribe({
       next: (response: PokemonData) => {
-        let shape: string = "";
-        this.getShape(eventId).subscribe({
-          next: (response) => {
-            shape = response;
-            console.log(response)
-          }
-        });
-        console.log(shape)
-        let pokemonHeight:any = response?.height;
-        let calcImgHeight:number = 30 + pokemonHeight * (shape !== "squiggle" ? 4: 1.6);
-        calcImgHeight > 100 ? response.imgHeight = 100 : response.imgHeight = calcImgHeight;
-        console.log(calcImgHeight)
         this.selectedPokemonData = response;
       },
       error: (error: HttpErrorResponse) => {
@@ -69,23 +64,4 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-
-  private getShape(eventId:string):Observable<string> {
-    let subject = new Subject<string>();
-    this.pokeapiService.getSpeciesById(eventId).subscribe({
-      next: (response: SpeciesData) => {
-        console.log("GET SHAPE RESPONSE")
-        console.log(response.shape?.name)
-        subject.next(response.shape?.name);
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-        console.error(error);
-      }
-    })
-    console.log("SUBJECT")
-    console.log(subject.asObservable().subscribe((res) => res));
-    return subject.asObservable();
-  }
-
 }
