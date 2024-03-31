@@ -2,10 +2,12 @@
   <div id="cardContainer">
     <div id="arrow" [ngClass]="{selected: isSelected}"></div>
     <div id="card" (click)="pokemonClicked.emit(id)">
-      <div class="circle innerShadow"></div>
-      <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png' alt="">
-      <span id="number">No. {{id}}</span>
-      <span id="name" *ngIf="data">{{ data.name | titlecase }}</span>
+      <div id="cardHighlight" [ngClass]="{selected: isSelected}">
+        <div class="circle innerShadow"></div>
+        <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png' alt="">
+        <span id="number">No. {{id}}</span>
+        <span id="name" *ngIf="data">{{ data.name | titlecase }}</span>
+      </div>
     </div>
   </div>
 </div>

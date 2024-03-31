@@ -61,6 +61,25 @@
   }
 }
 
+#cardHighlight {
+  display: inherit;
+  align-items: inherit;
+  width: inherit;
+  height: inherit;
+  position: inherit;
+  border-radius: inherit;
+
+  &.selected{
+    background: #faa353;
+    box-shadow: inset rgba(255, 255, 255, 0.6) 0 0 4px 4px;;
+  }
+}
+
+/*
+
+
+ */
+
 span {
   font-size: 25px;
   font-weight: 500;
