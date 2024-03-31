@@ -55,6 +55,7 @@
     height: 50px;
     aspect-ratio: 1;
     margin-left: 20px;
+    user-select: none;
   }
 }
 
@@ -62,6 +63,7 @@ span {
   font-size: 25px;
   font-weight: 500;
   color: #3f3717;
+  user-select: none;
 }
 
 #number{

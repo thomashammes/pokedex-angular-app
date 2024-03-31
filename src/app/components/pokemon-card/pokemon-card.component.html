@@ -1,7 +1,7 @@
 <div id="cardWrapper" >
   <div id="cardContainer">
     <div id="arrow"></div>
-    <div id="card">
+    <div id="card" (click)="pokemonClicked.emit(id)">
       <div class="circle innerShadow"></div>
       <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png' alt="">
       <span id="number">No. {{id}}</span>

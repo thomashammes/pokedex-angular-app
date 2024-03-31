@@ -1,11 +1,14 @@
 <main id="mainContainer">
 
   <div id="mainStripes">
-    <app-pokemon-display></app-pokemon-display>
+    <app-pokemon-display
+      [pokemon]="selectedPokemonData"
+    ></app-pokemon-display>
 
     <div id="cardsContainer">
       <app-pokemon-card *ngFor="let pokemon of pokemonList"
         [data]="pokemon"
+        (pokemonClicked)="cardClicked($event)"
       ></app-pokemon-card>
     </div>
   </div>

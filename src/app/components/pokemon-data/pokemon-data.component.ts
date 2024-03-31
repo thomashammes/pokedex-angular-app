@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {PokeapiService} from "../../services/pokeapi.service";
 import {HttpErrorResponse} from "@angular/common/http";
-import {PokemonData} from "./pokemon-data";
 import {NgForOf, NgIf} from "@angular/common";
 
 
@@ -15,7 +14,7 @@ import {NgForOf, NgIf} from "@angular/common";
 
 export class PokemonDataComponent implements OnInit {
 
-  public pokemonList: PokemonData[] | undefined;
+  public pokemonList: any | undefined;
 
   constructor(private pokeApiService: PokeapiService) { }
 
@@ -25,7 +24,7 @@ export class PokemonDataComponent implements OnInit {
 
   public getDittoTest(): void {
     this.pokeApiService.getDittoTest().subscribe({
-      next: (response: PokemonData[]) => {
+      next: (response: any) => {
         console.log(response);
         this.pokemonList = response;
       },
