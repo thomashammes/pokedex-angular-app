@@ -1,7 +1,7 @@
 #displayContainerWrapper {
   border-radius: 6%;
   //max-width: 40vw;
-  max-height: 80vh;
+  height: calc(100vh - 200px);
   aspect-ratio: 1.15;
   position: relative;
   background: linear-gradient(to bottom, #92c8e5, #87aee7, #89a0d9);
